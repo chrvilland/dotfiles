@@ -132,3 +132,5 @@ RPROMPT="%F{241}%B%t%b%f"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 export PATH="/home/chrv/.local/share/uv/tools/bin:$PATH"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
