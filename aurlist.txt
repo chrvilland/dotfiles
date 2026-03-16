@@ -1,0 +1,10 @@
+databricks-cli-bin 0.276.0-1
+pass-git-helper 4.1.0-2
+python-betterproto-git r440.a3f7fd0-1
+python-grpclib 0.4.7-1
+python-hologram 0.0.16-2
+python-mashumaro 3.15-1
+python-minimal-snowplow-tracker 0.0.2-2
+wslu 4.1.10-1
+yay 12.5.2-2
+yay-debug 12.5.2-2
