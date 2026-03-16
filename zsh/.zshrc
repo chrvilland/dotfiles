@@ -7,9 +7,20 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=/usr/bin:$PATH
+
+[ -t 0 ] && export GPG_TTY=$(tty)
+export PINENTRY_MODE=tty
+
+gpgconf --launch gpg-agent
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+
+if [ -z "$SSH_AUTH_SOCK" ]; then
+  eval "$(ssh-agent -s)" > /dev/null
+  ssh-add ~/.ssh/id_rsa 2>/dev/null
+fi
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
@@ -134,3 +145,7 @@ RPROMPT="%F{241}%B%t%b%f"
 export PATH="/home/chrv/.local/share/uv/tools/bin:$PATH"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export BROWSER=~/bin/wsl-open
+export BROWSER=~/bin/wsl-open
+alias open=xdg-open
+export AZURE_DEVOPS_EXT_PAT=
