@@ -1,0 +1,128 @@
+{
+    "markdownlint.config": {
+        "MD010": false,
+        "MD024": false,
+        "MD025": false,
+        "MD029": false,
+        "MD036": false
+    },
+    "markdown-preview-enhanced.previewColorScheme": "editorColorScheme",
+    "editor.guides.bracketPairs": true,
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "Consolas",
+    "editor.cursorBlinking": "phase",
+    "editor.smoothScrolling": true,
+    "editor.semanticHighlighting.enabled": true,
+    "editor.inlineSuggest.enabled": true,
+    "editor.renderWhitespace": "trailing",
+    "editor.showFoldingControls": "mouseover",
+    "editor.folding": true,
+    "editor.renderControlCharacters": true,
+    "editor.selectionHighlight": true,
+    "editor.occurrencesHighlight": "singleFile",
+    "terminal.integrated.fontFamily": "Consolas",
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.smoothScrolling": true,
+    "telemetry.telemetryLevel": "off",
+    "indentRainbow.errorColor": "rgba(0, 0, 0, 0)",
+    "indentRainbow.indicatorStyle": "light",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.tree.indent": 20,
+    "workbench.startupEditor": "none",
+    "workbench.enableExperiments": false,
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "extensions.autoUpdate": false,
+    "update.mode": "manual",
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "vsicons.dontShowNewVersionMessage": true,
+    "latex-workshop.latex.outDir": "build",
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "xelatex",
+            "command": "xelatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-directory=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-shell-escape",
+                "-output-directory=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%OUTDIR%/%DOCFILE%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "biber",
+            "command": "biber",
+            "args": [
+                "%OUTDIR%/%DOCFILE%"
+            ],
+            "env": {}
+        }
+    ],
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "pdfLateX + Biber + pdfLaTeX (x2)",
+            "tools": [
+                "pdflatex",
+                "biber",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "pdfLaTeX",
+            "tools": [
+                "pdflatex"
+            ]
+        }
+    ],
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.recipe.default": "lastUsed",
+    "python.analysis.typeCheckingMode": "standard",
+    "git.openRepositoryInParentFolders": "never",
+    "remote.autoForwardPortsSource": "hybrid",
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
+    "explorer.confirmDragAndDrop": false,
+    "dbt.dbtPythonPathOverride": "/home/chrv/Code/DatabricksConfig/databricks/.venv/bin/python",
+    "chat.mcp.gallery.enabled": true,
+    "github.copilot.enable": {
+        "*": false
+    }
+}
+ 

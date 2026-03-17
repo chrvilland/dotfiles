@@ -1,0 +1,15 @@
+{
+  "Markdown Template": {
+    "prefix": "md",
+    "body": [
+      "---",
+      "title: ${TM_FILENAME_BASE}",
+      "date: ${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}",
+      "tags:",
+      "---",
+      "# ${TM_FILENAME_BASE}",
+      "",
+      "$0"
+    ]
+  }
+}
