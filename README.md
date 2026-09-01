@@ -1,20 +1,11 @@
-# Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+# Dotfiles
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+Collection of configuration files I use in my WSL installation. Storing these files together them easy to version control. However, dotfiles like .gitconfig and .zshrc are assumed to be in the home directory, /home/<username>. I therefore use [stow](https://www.gnu.org/software/stow/) to create symlinks in the home directory which links back to the files stored in this directory, i.e. `/home/<username>/.gitconfig -> dotfiles/git/.gitconfig`.
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+The organisation of the files in this directory is important. Each dotfile or collection of dotfiles is placed in a folder - .gitconfig is for example placed in git/. Then the symlinks are established through
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+```bash
+stow <folder-name>
+```
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
+So for example, `stow git` to establish the symlink between `~/.gitconfig` and `dotfiles/git/.gitconfig`. When doing `stow <folder-name>`, stow adopts the same hierarchy as in the given folder when it establishes symlinks. So for dotfiles that are expected to exist in a subfolder in the home directory, the expected folder structure needs to be mirrored in the dotfiles directory. For example, a dotfile expected to reside in `~/.config/.exampledotfile`, will need to be symlinked to the following file in dotfiles `dotfiles/config/.config/.exampledotfile`. When executing `stow config`, stow copies the hierarchy existing in the config folder into the home directory.
