@@ -5,6 +5,8 @@
 	ui = auto
 [credential "https://dev.azure.com"]
 	useHttpPath = true
+[credential "https://github.com"]
+	helper = !gh auth git-credential
 [include]
 	path = ~/.gitconfig.local
 [credential]
