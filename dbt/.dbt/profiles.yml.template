@@ -1,0 +1,19 @@
+databricks_dbt:
+  outputs:
+    dev:
+      catalog: dev_dbt
+      host: adb-<host-id>.azuredatabricks.net
+      http_path: /sql/1.0/warehouses/<warehouse-id>
+      schema: az1cvil
+      threads: 4
+      token: <PAT>
+      type: databricks
+    test:
+      catalog: test_dbt
+      host: adb-<host-id>.azuredatabricks.net
+      http_path: /sql/1.0/warehouses/<warehouse-id>
+      schema: az1cvil
+      threads: 4
+      token: <PAT>
+      type: databricks
+  target: dev
