@@ -1,7 +1,7 @@
 azure-functions-core-tools-bin 4.12.1-1
 azure-functions-core-tools-bin-debug 4.12.1-1
-databricks-cli-bin 0.295.0-1
-databricks-cli-bin-debug 0.295.0-1
+databricks-cli-bin 1.23.0-1
+databricks-cli-bin-debug 1.23.0-1
 pass-git-helper 4.1.0-2
 python-betterproto-git r440.a3f7fd0-1
 python-grpclib 0.4.9-1
