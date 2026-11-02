@@ -28,6 +28,8 @@ fi
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+alias note='note() { current_date=$(source ~/scripts/timestamp.sh) && save_path=~/Notes/Quicknotes/"$current_date.md" && echo "$@" > $save_path && echo "Saved to $save_path" && echo "- [ ] $current_date.md" >> ~/Notes/Quicknotes/index.md }; note'
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
